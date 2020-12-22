@@ -12,7 +12,6 @@ public class Cat implements Skills {
         this.maxJump = maxJump;
     }
 
-
     @Override
     public boolean run(Obstacle obstacle) {
         System.out.println("Котик бежит:");
