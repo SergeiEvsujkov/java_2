@@ -5,7 +5,7 @@ public class Main {
         Skills[] user = new Skills[3];
         user[0] = new Person("Иван", 5, 1.3);
         user[1] = new Cat("Барсик", 0.9, 1.1);
-        user[2] = new Bot("Робик", 3, 0.8);
+        user[2] = new Bot("Робик", 13, 2);
 
         Obstacle[] obstacle = new Obstacle[3];
         obstacle[0] = new Barrier(1);
