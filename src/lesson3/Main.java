@@ -22,11 +22,14 @@ public class Main {
 
     private static void task2() {
         PhoneDirectory.add("Евсюков", "89134448987");
+        PhoneDirectory.add("   ", "89134448433");
         PhoneDirectory.add("Иванов", "89134444455");
+        PhoneDirectory.add("", "89134477870");
         PhoneDirectory.add("Иванов", "89139444466");
         PhoneDirectory.get("Иванов");
         PhoneDirectory.get("Евсюков");
         PhoneDirectory.get("Сидоров");
+        PhoneDirectory.get("");
 
     }
 

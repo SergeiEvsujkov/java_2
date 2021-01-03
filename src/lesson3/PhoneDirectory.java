@@ -9,16 +9,29 @@ public class PhoneDirectory {
     public static void add(String name, String phone) {
 
         HashSet <String> phoneList = new HashSet<>();
+
         if (phoneDir.get(name) != null) {
-            phoneList = phoneDir.get(name);
+            if (!name.isBlank()) {
+                phoneList = phoneDir.get(name);
+            } else {
+                phoneList = phoneDir.get("");
+            }
         }
         phoneList.add(phone);
-        phoneDir.put(name, phoneList);
+        if (!name.isBlank()) {
+            phoneDir.put(name, phoneList);
+        } else {
+            phoneDir.put("", phoneList);
+        }
     }
 
     public static void get(String name) {
         if (phoneDir.get(name) != null) {
-            System.out.println("Фамилия: " + name + ", телефон " + phoneDir.get(name));
+            if (!name.isBlank()) {
+                System.out.println("Фамилия: " + name + ", телефон " + phoneDir.get(name));
+            } else {
+                System.out.println("Анонимные телефоны: " + phoneDir.get(""));
+            }
         } else {
             System.out.println("Фамилии " + name + " нет в списке");
         }
